@@ -1,0 +1,22 @@
+name: WhoseHorse
+description: Allows users to check the owner of an animal.
+author: Pietu1998
+main: net.pietu1998.whosehorse.WhoseHorse
+version: 0.1
+commands:
+  whose:
+    description: Check the owner of an animal
+    usage: /<command>
+    permission: whosehorse.check
+
+permissions:
+  # full permissions
+  whosehorse.*:
+    description: Gives full access to WhoseHorse
+    children:
+      whosehorse.animal: true
+  
+  # animal checking permission
+  whosehorse.check:
+    description: Allows you to check the owner of an animal
+    default: true
